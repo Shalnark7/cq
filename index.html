@@ -21,8 +21,14 @@
 		bg1.width=800;
 		bg1.height=30;
 		
+		
+		
+		
+		
+		
 		var about = new PIXI.Sprite.fromImage("res/about.png");
 		app.stage.addChild(about);
+		about.buttonMode=true;
 		
 		
 		var news = new PIXI.Sprite.fromImage("res/news.png");
@@ -36,6 +42,19 @@
 		var contact = new PIXI.Sprite.fromImage("res/contact.png");
 		app.stage.addChild(contact);
 		contact.x=700;
+		
+		var gywm = new PIXI.Sprite.fromImage("res/gywm.png");
+		app.stage.addChild(gywm);
+		gywm.width=800;
+		gywm.height=300;
+		gywm.visible=false;
+		about.interactive = true;
+		about.buttonMode=true;
+		about.on("click",move);
+		function move() {
+		    gywm.visible=true;
+			
+		}
     </script>
 </body>
 </html>
